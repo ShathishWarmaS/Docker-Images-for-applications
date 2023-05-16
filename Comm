@@ -1,0 +1,50 @@
+Build Docker Image from a Dockerfile
+
+    $ docker build -t image-name docker-file-location  
+
+-t : it is used to tag Docker image with the provided name.
+Run Docker Image
+
+    $ docker run -d image-name  
+
+-d : It is used to create a daemon process.
+Check available Docker images
+
+    $ docker images  
+
+Check for latest running container
+
+    $ docker ps -l  
+     -l : it is used to show latest available container.
+
+Check all running containers
+
+    $ docker ps -a  
+
+-a : It is used to show all available containers.
+
+Stop running container
+
+    $ docker stop container_id  
+
+container_id : It is an Id assigned by the Docker to the container.
+Delete an image
+
+    $ docker rmi image-name  
+
+Delete all images
+
+    $ docker rmi $(docker images -q)  
+
+Delete all images forcefully
+
+    $ docker rmi -r $(docker images -q)  
+
+-r : It is used to delete image forcefully.
+Delete all containers
+
+    $ docker rm $(docker ps -a -q)  
+
+Enter into Docker container
+
+    $ docker exec -it container-id bash  
